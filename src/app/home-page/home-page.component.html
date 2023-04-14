@@ -2,3 +2,6 @@
 <div id="center-pane">
     <h1>International Cusine</h1>
 </div>
+<div>
+    <app-menu-tile *ngFor="let menu of menuList" [menu]="menu"></app-menu-tile>
+</div>

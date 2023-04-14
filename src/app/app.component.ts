@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { IMenu } from './models/imenu';
+import {MenuService} from './shared/imenu-service.service'
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Global-Food-Market';
+
 }

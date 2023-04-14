@@ -7,9 +7,9 @@
       "location":{
          "address":"20 1st ave",
          "city":"Minneapolis",
-         "state":"MN"
-		 "zip":"55401",
-		 "country":"USA",
+         "state":"MN",
+		   "zip":"55401",
+		   "country":"USA"
       },
       "menu":[
          {
@@ -33,7 +33,7 @@
 			"price": 1.99
          }
       ]
-   }
+   },
    {
       "id":"2",
       "name":"Italian",
@@ -42,9 +42,9 @@
       "location":{
          "address":"20 1st ave",
          "city":"Minneapolis",
-         "state":"MN"
-		 "zip":"55401",
-		 "country":"USA",
+         "state":"MN",
+		   "zip":"55401",
+		 "country":"USA"
       },
       "menu":[
          {
@@ -68,7 +68,7 @@
 			"price": 1.99
          }
       ]
-   }
+   },
    {
       "id":"3",
       "name":"Mexican",
@@ -77,9 +77,9 @@
       "location":{
          "address":"20 1st ave",
          "city":"Minneapolis",
-         "state":"MN"
-		 "zip":"55401",
-		 "country":"USA",
+         "state":"MN",
+		   "zip":"55401",
+		   "country":"USA"
       },
       "menu":[
          {
@@ -103,7 +103,7 @@
 			"price": 1.99
          }
       ]
-   }
+   },
    {
       "id":"4",
       "name":"Thai",
@@ -112,9 +112,9 @@
       "location":{
          "address":"20 1st ave",
          "city":"Minneapolis",
-         "state":"MN"
-		 "zip":"55401",
-		 "country":"USA",
+         "state":"MN",
+		   "zip":"55401",
+		 "country":"USA"
       },
       "menu":[
          {
