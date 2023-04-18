@@ -1,0 +1,142 @@
+[
+   {
+      "id":"1",
+      "name":"Chinese",
+      "description":"Chinese Food Menu.",
+	  "filename":"global-foods.jpg",
+      "location":{
+         "address":"20 1st ave",
+         "city":"Minneapolis",
+         "state":"MN",
+		   "zip":"55401",
+		   "country":"USA"
+      },
+      "menu":[
+         {
+            "name":"Chicken Fried Rice",
+            "type": "Main",
+			"price": 12.99
+         },
+         {
+            "name":"Salad",
+            "type": "Side",
+			"price": 6.99
+         },
+         {
+            "name":"Soy Sauce",
+            "type": "Extra",
+			"price": 0.0
+         },
+         {
+            "name":"Pepsi",
+            "type": "Drink",
+			"price": 1.99
+         }
+      ]
+   },
+   {
+      "id":"2",
+      "name":"Italian",
+      "description":"Italian Food Menu.",
+	  "filename":"global-foods.jpg",
+      "location":{
+         "address":"20 1st ave",
+         "city":"Minneapolis",
+         "state":"MN",
+		   "zip":"55401",
+		 "country":"USA"
+      },
+      "menu":[
+         {
+            "name":"Pasta",
+            "type": "Main",
+			"price": 12.99
+         },
+         {
+            "name":"Salad",
+            "type": "Side",
+			"price": 6.99
+         },
+         {
+            "name":"Soy Sauce",
+            "type": "Extra",
+			"price": 0.0
+         },
+         {
+            "name":"Pepsi",
+            "type": "Drink",
+			"price": 1.99
+         }
+      ]
+   },
+   {
+      "id":"3",
+      "name":"Mexican",
+      "description":"Mexican Food Menu.",
+	  "filename":"global-foods.jpg",
+      "location":{
+         "address":"20 1st ave",
+         "city":"Minneapolis",
+         "state":"MN",
+		   "zip":"55401",
+		   "country":"USA"
+      },
+      "menu":[
+         {
+            "name":"Chicken Fried Rice",
+            "type": "Main",
+			"price": 12.99
+         },
+         {
+            "name":"Salad",
+            "type": "Side",
+			"price": 6.99
+         },
+         {
+            "name":"Soy Sauce",
+            "type": "Extra",
+			"price": 0.0
+         },
+         {
+            "name":"Pepsi",
+            "type": "Drink",
+			"price": 1.99
+         }
+      ]
+   },
+   {
+      "id":"4",
+      "name":"Thai",
+      "description":"Thai Food Menu.",
+	  "filename":"global-foods.jpg",
+      "location":{
+         "address":"20 1st ave",
+         "city":"Minneapolis",
+         "state":"MN",
+		   "zip":"55401",
+		 "country":"USA"
+      },
+      "menu":[
+         {
+            "name":"Chicken Fried Rice",
+            "type": "Main",
+			"price": 12.99
+         },
+         {
+            "name":"Salad",
+            "type": "Side",
+			"price": 6.99
+         },
+         {
+            "name":"Soy Sauce",
+            "type": "Extra",
+			"price": 0.0
+         },
+         {
+            "name":"Pepsi",
+            "type": "Drink",
+			"price": 1.99
+         }
+      ]
+   }
+]

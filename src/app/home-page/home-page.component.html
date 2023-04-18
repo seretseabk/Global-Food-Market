@@ -1,0 +1,14 @@
+<app-header></app-header>
+<div class="row" id="center-pane">
+    <div class="col"></div>
+    <div class="col"><h1>International Cusine</h1></div>
+    <div class="col"></div>
+   
+    
+</div>
+<div class="row">
+    <div class="col" *ngFor="let menu of menuList">
+        <app-menu-tile [menu]="menu"></app-menu-tile>
+    </div>
+    
+</div>

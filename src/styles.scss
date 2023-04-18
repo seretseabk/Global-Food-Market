@@ -1,4 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
-h1{
-    text-align: center;
+.row {
+    padding: 20px;
+    margin: 10px;
+    border: 2px solid black;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
