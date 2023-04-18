@@ -1,20 +1,19 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'; 
 import { IMenu } from '../models/imenu';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MenuService {
 
-  public menuList : IMenu[] = [] ;
-  constructor(private http: HttpClient) { 
+  
+  constructor(private http: HttpClient) {}
 
-    this.http.get("/assets/data/data.json").subscribe((data: any) => {
-        this.menuList = data;
-    });
-    
-  }
+    getAll() {
+      return this.http.get<IMenu[]>("/assets/data/data.json");
+    }
 
   
 }

@@ -1,7 +1,10 @@
 <app-header></app-header>
-<div id="center-pane">
-    <h1>International Cusine</h1>
+<div class="row" id="center-pane">
+    <div class="col"></div>
+    <div class="col"><h1>International Cusine</h1></div>
+    <div class="col"></div>
+    
 </div>
-<div>
+<div class="row">
     <app-menu-tile *ngFor="let menu of menuList" [menu]="menu"></app-menu-tile>
 </div>
