@@ -25,5 +25,6 @@ export class MenuTileComponent {
     menu: []
 
   };
+
   
 }

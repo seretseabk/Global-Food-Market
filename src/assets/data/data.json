@@ -3,7 +3,7 @@
       "id":"1",
       "name":"Chinese",
       "description":"Chinese Food Menu.",
-	  "filename":"5855729828.jpg",
+	  "filename":"global-foods.jpg",
       "location":{
          "address":"20 1st ave",
          "city":"Minneapolis",
@@ -38,7 +38,7 @@
       "id":"2",
       "name":"Italian",
       "description":"Italian Food Menu.",
-	  "filename":"5855729828.jpg",
+	  "filename":"global-foods.jpg",
       "location":{
          "address":"20 1st ave",
          "city":"Minneapolis",
@@ -73,7 +73,7 @@
       "id":"3",
       "name":"Mexican",
       "description":"Mexican Food Menu.",
-	  "filename":"5855729828.jpg",
+	  "filename":"global-foods.jpg",
       "location":{
          "address":"20 1st ave",
          "city":"Minneapolis",
@@ -108,7 +108,7 @@
       "id":"4",
       "name":"Thai",
       "description":"Thai Food Menu.",
-	  "filename":"5855729828.jpg",
+	  "filename":"global-foods.jpg",
       "location":{
          "address":"20 1st ave",
          "city":"Minneapolis",

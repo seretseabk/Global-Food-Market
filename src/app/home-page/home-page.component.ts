@@ -12,8 +12,7 @@ export class HomePageComponent  implements OnInit {
   public menuList: IMenu[] = [];
 
   constructor(private _menuService: MenuService){
-    //this.menuList = _menuService.menuList;
-    //console.log(_menuService.menuList);
+   
   }
 
   ngOnInit(){
