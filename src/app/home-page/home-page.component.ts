@@ -10,7 +10,8 @@ import { Observable } from 'rxjs';
 })
 export class HomePageComponent  implements OnInit {
   public menuList: IMenu[] = [];
-
+  public selectedMenu: IMenu;
+  
   constructor(private _menuService: MenuService){
    
   }
@@ -21,4 +22,5 @@ export class HomePageComponent  implements OnInit {
       this.menuList = data;
     });
   }
+
 }

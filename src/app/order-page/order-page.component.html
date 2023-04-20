@@ -1,0 +1,36 @@
+
+<div>
+    <div class="row">
+        <h2>Ordering From {{menu.name}} Restaurant in {{menu.location.address}} {{menu.location.city}}, {{menu.location.state}}</h2>
+    </div>
+    <div class="row">
+        <div class="col">
+            <ul>
+                <li *ngFor="let m in menuList" [routerLink]="['/menu/' + m.id]" routerLinkActive="active">{{m.name}}</li>
+            </ul>
+        </div>
+        <div class="col">
+            <img class="card-img-top" [src]="'assets/images/'+ menu.filename" [alt]="menu.name">
+        </div>
+        <div class="col">
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Main Item</th>
+                    <th scope="col">Side Item</th>
+                    <th scope="col">Extras</th>
+                    <th scope="col">Drinks</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of menu.menu; let indexOfMenu=index;">
+                    <td>mainItems[index]</td>
+                    <td>sideItems[index]</td>
+                    <td>extras[index]</td>
+                    <td>drinks[index]</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
