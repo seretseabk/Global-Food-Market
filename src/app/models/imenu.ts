@@ -6,6 +6,7 @@ export interface IMenu {
     name: string;
     description: string;
     filename: string;
+    photoname: string;
     location: IAddress;
     menu: IMenuItem[];
 }
