@@ -2,13 +2,11 @@ import { Component, Input } from '@angular/core';
 import { IMenu } from '../models/imenu';
 
 @Component({
-  selector: 'app-menu-tile',
-  templateUrl: './menu-tile.component.html',
-  styleUrls: ['./menu-tile.component.scss']
+  selector: 'app-main-detail',
+  templateUrl: './main-detail.component.html',
+  styleUrls: ['./main-detail.component.scss']
 })
-export class MenuTileComponent {
-
-
+export class MainDetailComponent {
   @Input() public menu : IMenu = {
     id: 0,
     name: '',
@@ -26,6 +24,4 @@ export class MenuTileComponent {
     menu: []
 
   };
-
-  
 }
