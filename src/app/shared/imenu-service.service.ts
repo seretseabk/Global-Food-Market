@@ -15,34 +15,6 @@ export class MenuService {
       return this.http.get<IMenu[]>("/assets/data/data.json");
     }
 
-    getById(id: number): IMenu {
-      let menu: IMenu = {
-        id: 0,
-        name: '',
-        description: '',
-        filename: '',
-        location: {
-          address: '',
-          city: '',
-          state: '',
-          zip: '',
-          country: ''
-          
-        },
-        menu: []
-      };
-      
-      this.getAll().subscribe((data) => {
-        data.forEach(item => {
-          if (item.id === id) {
-              menu = item;
-          }
-           
-        });
-      });
-
-      return menu;
-    }
 
   
 }

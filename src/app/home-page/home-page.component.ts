@@ -18,8 +18,9 @@ export class HomePageComponent  implements OnInit {
 
   ngOnInit(){
     this._menuService.getAll().subscribe((data) => {
-      console.log(data);
       this.menuList = data;
+      console.log("Data in Homepage:");
+      console.log(data);
     });
   }
 

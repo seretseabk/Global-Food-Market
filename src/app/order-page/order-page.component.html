@@ -5,14 +5,13 @@
     </div>
     <div class="row">
         <div class="col">
-            <ul>
-                <li *ngFor="let m in menuList" [routerLink]="['/menu/' + m.id]" routerLinkActive="active">{{m.name}}</li>
-            </ul>
+            <nav *ngFor="let m of menuList" [routerLink]="['/menu/' + m.id]" routerLinkActive="active" class="navbar navbar-light bg-light">
+                <a class="navbar-brand" >{{m.name}}</a><br><br>
+              </nav>
         </div>
-        <div class="col">
-            <img class="card-img-top" [src]="'assets/images/'+ menu.filename" [alt]="menu.name">
-        </div>
-        <div class="col">
+        <div class="col-8">
+            <img class="card-img-top" [src]="'assets/images/'+ menu.filename" [alt]="menu.name" width="65%">
+            <br>
             <table class="table table-striped">
                 <thead>
                   <tr>
@@ -23,14 +22,16 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr *ngFor="let item of menu.menu; let indexOfMenu=index;">
-                    <td>mainItems[index]</td>
-                    <td>sideItems[index]</td>
-                    <td>extras[index]</td>
-                    <td>drinks[index]</td>
+                  <tr *ngFor="let item of mainItems; let indexOfMenu=index;">
+                    <td>{{mainItems[indexOfMenu].name}}</td>
+                    <td>{{sideItems[indexOfMenu].name}}</td>
+                    <td>{{extras[indexOfMenu].name}}</td>
+                    <td>{{drinks[indexOfMenu].name}}</td>
                   </tr>
                 </tbody>
               </table>
+        </div>
+        <div class="col">
         </div>
     </div>
 </div>
