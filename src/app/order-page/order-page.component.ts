@@ -32,13 +32,29 @@ export class OrderPageComponent implements OnInit {
   public sideItems : IMenuItem[] = [];
   public extras : IMenuItem[] = [];
   public drinks : IMenuItem[] = [];
-
+  public cart: IMenuItem[] = [];
+  public total: number = 0.00;
   constructor(private activatedRoute: ActivatedRoute, private _menuService: MenuService){
    
     }
 
     
   ngOnInit() {
+    this.setCurrentSelectedData();
+    
+  }
+
+  onMenuSelect(){
+    this.setCurrentSelectedData();
+  }
+
+  setCurrentSelectedData(){
+
+    this.mainItems = [];
+    this.sideItems = [];
+    this.extras = [];
+    this.drinks = [];
+
     this.activatedRoute.paramMap.subscribe({
       next:(params) => {
         this.id = params.get("id") || "";
@@ -72,9 +88,16 @@ export class OrderPageComponent implements OnInit {
         }
           
       });
+  }
 
+  onAddToCart(item: IMenuItem){
     
-    
+    let orderItem = this.cart.find(ob => ob.name === item.name);
+    if(orderItem != null){
+      orderItem.count++;
+    } else {
+      this.cart.push(item);
+    }
   }
 }
 
