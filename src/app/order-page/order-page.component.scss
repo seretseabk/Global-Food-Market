@@ -18,3 +18,18 @@ h4{
     padding: 5px;
     text-align: center;
 }
+
+#item-count{
+    float: right;
+    width:20%;
+}
+#delete-item{
+    float: right;
+}
+.btn.btn-info.disabled{
+    width: 100%;
+}
+.row-noborder{
+    overflow: scroll;
+    height: 200px;
+}

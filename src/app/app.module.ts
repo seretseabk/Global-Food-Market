@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { MenuTileComponent } from './menu-tile/menu-tile.component';
 import { OrderPageComponent } from './order-page/order-page.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { OrderPageComponent } from './order-page/order-page.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

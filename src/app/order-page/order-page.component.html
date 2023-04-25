@@ -42,9 +42,15 @@
         <div class="col">
             <h4>Cart</h4>
             <br>
-            <a *ngFor="let item of cart" class="btn btn-outline-secondary">{{item.name}} | {{item.count}} <i class="fa fa-trash"></i></a>
+            <div *ngIf="cart.length > 0" class="row-noborder">
+              <a *ngFor="let item of cart; let itemIndex=index" class="btn btn-outline-secondary">{{item.name}}
+                <input id="item-count" type="number" [(ngModel)]="cart[itemIndex].count" />
+                <button id="delete-item" class="btn btn-danger btn-sm" (click)="onDeleteFromCart(itemIndex)"><i class="fa fa-trash"></i></button>
+              </a>
+            </div>
             <br>
             <br>
+            <span *ngIf="cart.length > 0" class="btn btn-info disabled">{{total | currency}}</span>
             <button *ngIf="cart.length > 0" type="button" class="btn btn-secondary btn-lg btn-block">Check Out</button>
         </div>
     </div>

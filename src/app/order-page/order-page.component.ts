@@ -34,6 +34,7 @@ export class OrderPageComponent implements OnInit {
   public drinks : IMenuItem[] = [];
   public cart: IMenuItem[] = [];
   public total: number = 0.00;
+  
   constructor(private activatedRoute: ActivatedRoute, private _menuService: MenuService){
    
     }
@@ -93,11 +94,32 @@ export class OrderPageComponent implements OnInit {
   onAddToCart(item: IMenuItem){
     
     let orderItem = this.cart.find(ob => ob.name === item.name);
+    console.log("Adding to Cart");
+
     if(orderItem != null){
+      
       orderItem.count++;
     } else {
+      item.count = 1;
       this.cart.push(item);
     }
+
+    this.getTotal();
+
+  }
+
+  onDeleteFromCart(itemIndex: number){
+    console.log("Deleting from Cart. Index: " + itemIndex)
+    this.cart.splice(itemIndex, 1);
+    this.getTotal();
+  }
+
+  getTotal(){
+    this.total = 0;
+    this.cart.forEach(item => {
+      this.total += (item.count * item.price);
+    });
+
   }
 }
 
