@@ -10,15 +10,18 @@ import { Observable } from 'rxjs';
 })
 export class HomePageComponent  implements OnInit {
   public menuList: IMenu[] = [];
-
+  public selectedMenu: IMenu;
+  
   constructor(private _menuService: MenuService){
    
   }
 
   ngOnInit(){
     this._menuService.getAll().subscribe((data) => {
-      console.log(data);
       this.menuList = data;
+      console.log("Data in Homepage:");
+      console.log(data);
     });
   }
+
 }

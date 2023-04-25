@@ -10,10 +10,11 @@ export class MenuService {
 
   
   constructor(private http: HttpClient) {}
-
+    
     getAll() {
       return this.http.get<IMenu[]>("/assets/data/data.json");
     }
+
 
   
 }

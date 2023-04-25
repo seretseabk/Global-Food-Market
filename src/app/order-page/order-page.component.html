@@ -1,0 +1,57 @@
+
+<div>
+    <div class="row" id="center-pane">
+        <div class="col"></div>
+        <div class="col-8">
+            <h2>Ordering From {{menu.name}} Restaurant in {{menu.location.address}} {{menu.location.city}}, {{menu.location.state}}</h2>
+        </div>
+        <div class="col"></div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <button *ngFor="let m of menuList" 
+            [routerLink]="['/menu/' + m.id]" 
+            routerLinkActive="active" 
+            (click)="onMenuSelect()"
+            type="button" 
+            class="btn btn-secondary btn-lg btn-block">{{m.name}}</button> 
+        </div>
+        <div class="col-8" id="menu-pane">
+            <img [src]="'assets/images/'+ menu.filename" [alt]="menu.name" id="menu-image">
+            <br>
+            <br>
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Main Item</th>
+                    <th scope="col">Side Item</th>
+                    <th scope="col">Extras</th>
+                    <th scope="col">Drinks</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of mainItems; let indexOfMenu=index;">
+                    <td>{{mainItems[indexOfMenu].name}} <button type="button" class="btn btn-dark btn-sm" (click)="onAddToCart(mainItems[indexOfMenu])">Add</button></td>
+                    <td>{{sideItems[indexOfMenu].name}} <button type="button" class="btn btn-dark btn-sm" (click)="onAddToCart(sideItems[indexOfMenu])">Add</button></td>
+                    <td>{{extras[indexOfMenu].name}} <button type="button" class="btn btn-dark btn-sm" (click)="onAddToCart(extras[indexOfMenu])">Add</button></td>
+                    <td>{{drinks[indexOfMenu].name}} <button type="button" class="btn btn-dark btn-sm" (click)="onAddToCart(drinks[indexOfMenu])">Add</button></td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+        <div class="col">
+            <h4>Cart</h4>
+            <br>
+            <div *ngIf="cart.length > 0" class="row-noborder">
+              <a *ngFor="let item of cart; let itemIndex=index" class="btn btn-outline-secondary">{{item.name}}
+                <input id="item-count" type="number" [(ngModel)]="cart[itemIndex].count" />
+                <button id="delete-item" class="btn btn-danger btn-sm" (click)="onDeleteFromCart(itemIndex)"><i class="fa fa-trash"></i></button>
+              </a>
+            </div>
+            <br>
+            <br>
+            <span *ngIf="cart.length > 0" class="btn btn-info disabled">{{total | currency}}</span>
+            <button *ngIf="cart.length > 0" type="button" class="btn btn-secondary btn-lg btn-block">Check Out</button>
+        </div>
+    </div>
+</div>

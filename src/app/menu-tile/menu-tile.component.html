@@ -2,9 +2,9 @@
 <div class="card" style="width: 18rem;">
     <img class="card-img-top" [src]="'assets/images/'+ menu.filename" alt="Card image cap">
     <div class="card-body">
-    <h5 class="card-title">{{menu.name}}</h5>
-    <p class="card-text">{{menu.description}}</p>
-    <a href="#" class="btn btn-dark">Start Order</a>
+        <h5 class="card-title">{{menu.name}}</h5>
+        <p class="card-text">{{menu.description}}</p>
+        <a class="btn btn-dark" [routerLink]="['/menu/'+ menu.id]" routerLinkActive="active">Start Order</a>
     </div>
 </div>
 
