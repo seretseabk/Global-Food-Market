@@ -11,7 +11,7 @@
         
         <br/>
         <br/>
-        <input type="text" placeholder="Search" id="input-search">
+        <input type="text" placeholder="Search Menus" [(ngModel)]="searchText" id="input-search" (ngModelChange)="updateSearchText(searchText)">
     </div>
       
 </div>

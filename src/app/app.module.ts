@@ -8,6 +8,10 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { MenuTileComponent } from './menu-tile/menu-tile.component';
 import { OrderPageComponent } from './order-page/order-page.component';
 import { FormsModule } from '@angular/forms';
+import { CheckoutPageComponent } from './checkout-page/checkout-page.component';
+import { CreditCardDirectivesModule } from 'angular-cc-library';
+import { FilterMenuPipe } from './shared/filter-menu.pipe';
+
 
 @NgModule({
   declarations: [
@@ -15,12 +19,16 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     HomePageComponent,
     MenuTileComponent,
-    OrderPageComponent
+    OrderPageComponent,
+    CheckoutPageComponent,
+    FilterMenuPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    CreditCardDirectivesModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

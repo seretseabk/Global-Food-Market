@@ -16,7 +16,7 @@
             type="button" 
             class="btn btn-secondary btn-lg btn-block">{{m.name}}</button> 
         </div>
-        <div class="col-8" id="menu-pane">
+        <div class="col-7" id="menu-pane">
             <img [src]="'assets/images/'+ menu.filename" [alt]="menu.name" id="menu-image">
             <br>
             <br>
@@ -44,14 +44,14 @@
             <br>
             <div *ngIf="cart.length > 0" class="row-noborder">
               <a *ngFor="let item of cart; let itemIndex=index" class="btn btn-outline-secondary">{{item.name}}
-                <input id="item-count" type="number" [(ngModel)]="cart[itemIndex].count" />
+                <input id="item-count" type="number" [(ngModel)]="cart[itemIndex].count" (ngModelChange)="getTotal()" />
                 <button id="delete-item" class="btn btn-danger btn-sm" (click)="onDeleteFromCart(itemIndex)"><i class="fa fa-trash"></i></button>
               </a>
             </div>
             <br>
             <br>
             <span *ngIf="cart.length > 0" class="btn btn-info disabled">{{total | currency}}</span>
-            <button *ngIf="cart.length > 0" type="button" class="btn btn-secondary btn-lg btn-block">Check Out</button>
+            <button *ngIf="cart.length > 0" type="button" class="btn btn-secondary btn-lg btn-block" (click)="onCheckOut()">Check Out</button>
         </div>
     </div>
 </div>

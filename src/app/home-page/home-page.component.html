@@ -1,12 +1,12 @@
 
 <div id="main-pane">
     <div class="row" id="center-pane">
-        <div class="col"></div>
-        <div class="col"><h1>International Cusine</h1></div>
-        <div class="col"></div>     
+        <div class="col">
+            <h1>International Cusine</h1>
+        </div>
     </div>
     <div class="row">
-        <div class="col" *ngFor="let m of menuList">
+        <div class="col" id="tile-container" *ngFor="let m of menuList | filterMenu: searchText">
             <app-menu-tile [menu]="m" ></app-menu-tile>
         </div>
         

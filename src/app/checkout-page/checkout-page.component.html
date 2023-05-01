@@ -1,0 +1,20 @@
+<div class="row" *ngIf="!submitted">
+    <form #checkoutForm="ngForm" (ngSubmit)="onSubmit(checkoutForm)" novalidate>
+        <label>Credit Card Number</label>
+        <input id="cc-number" type="tel" autocomplete="cc-number" ccNumber required><br>
+        <label>Expiration Date</label>
+        <input id="cc-exp-date" type="tel" autocomplete="cc-exp" ccExp required><br>
+        <label>CVC</label>
+        <input id="cc-cvc" type="tel" autocomplete="off" ccCvc required><br><br>
+        <input class="btn btn-success btn-lg btn-block" type="submit" [disabled]="!checkoutForm.valid">
+    </form>
+</div>
+<div class="row" *ngIf="submitted">
+    <div class="col">
+        <h3>Order placed at: {{order.menuName}} Resturant</h3>
+        <h4>Location: {{order.location.address}},</h4>
+        <h4>{{order.location.city}}, {{order.location.state}},</h4>
+        <h4>{{order.location.zip}}</h4>
+        <p class="btn btn-outline-success">Your Order should be ready in 20-30 minutes!</p>
+    </div>
+</div>
