@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MenuService } from '../shared/imenu-service.service';
 import { Iorder } from '../models/iorder';
 import { ActivatedRoute } from '@angular/router';
-import { FormGroup, NgForm } from '@angular/forms';
+import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { CreditCardValidators } from 'angular-cc-library';
 
 @Component({
@@ -14,12 +14,20 @@ export class CheckoutPageComponent implements OnInit {
 
   public order: Iorder;
   public id: string;
-  public saveUnsuccessful: boolean = false;
+  public valid: boolean = false;
   public submitted: boolean = false;
-  constructor(private activatedRoute: ActivatedRoute, private _menuService: MenuService){
+  form: FormGroup;
+  constructor(private activatedRoute: ActivatedRoute, private _menuService: MenuService, private _fb: FormBuilder){
 
   }
   ngOnInit() {
+
+    this.form = this._fb.group({
+      creditCard: ['', [CreditCardValidators.validateCCNumber]],
+      expirationDate: ['', [CreditCardValidators.validateExpDate]],
+      cvc: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(4)]] 
+    });
+
     this.activatedRoute.paramMap.subscribe({
       next:(params) => {
         this.id = params.get("id") || "";
@@ -32,12 +40,12 @@ export class CheckoutPageComponent implements OnInit {
   }
 
   onSubmit(ngForm: NgForm){
-    this.saveUnsuccessful = false;
+    this.valid = false;
 
     if (!ngForm.valid) {
-      this.saveUnsuccessful = true;
+      this.valid = false;
       return;
-    }
+    } 
 
     console.log(ngForm);
     ngForm.resetForm();

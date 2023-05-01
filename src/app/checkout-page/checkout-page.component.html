@@ -1,12 +1,12 @@
 <div class="row" *ngIf="!submitted">
     <form #checkoutForm="ngForm" (ngSubmit)="onSubmit(checkoutForm)" novalidate>
         <label>Credit Card Number</label>
-        <input id="cc-number" type="tel" autocomplete="cc-number" ccNumber><br>
+        <input id="cc-number" type="tel" autocomplete="cc-number" ccNumber required><br>
         <label>Expiration Date</label>
-        <input id="cc-exp-date" type="tel" autocomplete="cc-exp" ccExp><br>
+        <input id="cc-exp-date" type="tel" autocomplete="cc-exp" ccExp required><br>
         <label>CVC</label>
-        <input id="cc-cvc" type="tel" autocomplete="off" ccCvc><br><br>
-        <input class="btn btn-success btn-lg btn-block" type="submit">
+        <input id="cc-cvc" type="tel" autocomplete="off" ccCvc required><br><br>
+        <input class="btn btn-success btn-lg btn-block" type="submit" [disabled]="!checkoutForm.valid">
     </form>
 </div>
 <div class="row" *ngIf="submitted">
