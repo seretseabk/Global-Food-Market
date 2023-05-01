@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { IMenu } from '../models/imenu';
 import { IMenuItem } from '../models/imenu-item';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MenuService } from '../shared/imenu-service.service';
+import { Iorder } from '../models/iorder';
 
 @Component({
   selector: 'app-order-page',
@@ -35,7 +36,7 @@ export class OrderPageComponent implements OnInit {
   public cart: IMenuItem[] = [];
   public total: number = 0.00;
   
-  constructor(private activatedRoute: ActivatedRoute, private _menuService: MenuService){
+  constructor(private activatedRoute: ActivatedRoute, private _menuService: MenuService, private router: Router){
    
     }
 
@@ -120,6 +121,22 @@ export class OrderPageComponent implements OnInit {
       this.total += (item.count * item.price);
     });
 
+  }
+
+  onCheckOut(){
+    let order: Iorder = {
+      id: this._menuService.getOrderId() + 1,
+      menuName: this.menu.name,
+      location: this.menu.location,
+      total: this.total,
+      items: this.cart,
+      complete: false
+    }
+
+    this._menuService.addOrder(order);
+    this.router.navigate(['/checkout', this._menuService.getOrderId()]);
+    console.log("Orders:");
+    console.log(this._menuService.getOrders());
   }
 }
 
