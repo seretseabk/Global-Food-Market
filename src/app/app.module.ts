@@ -7,10 +7,11 @@ import { HeaderComponent } from './header/header.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { MenuTileComponent } from './menu-tile/menu-tile.component';
 import { OrderPageComponent } from './order-page/order-page.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CheckoutPageComponent } from './checkout-page/checkout-page.component';
 import { CreditCardDirectivesModule } from 'angular-cc-library';
 import { FilterMenuPipe } from './shared/filter-menu.pipe';
+import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
 
 
 @NgModule({
@@ -27,10 +28,13 @@ import { FilterMenuPipe } from './shared/filter-menu.pipe';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    CreditCardDirectivesModule
+    CreditCardDirectivesModule,
+    ReactiveFormsModule,
+    NgxMaskDirective, 
+    NgxMaskPipe
     
   ],
-  providers: [],
+  providers: [provideNgxMask()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

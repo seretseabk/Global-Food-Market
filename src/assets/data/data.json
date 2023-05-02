@@ -38,7 +38,7 @@
       "id":"2",
       "name":"Italian",
       "description":"Italian Food Menu.",
-	  "filename":"global-foods.jpg",
+	  "filename":"Italian.png",
       "location":{
          "address":"20 1st ave",
          "city":"Minneapolis",
@@ -73,7 +73,7 @@
       "id":"3",
       "name":"Mexican",
       "description":"Mexican Food Menu.",
-	  "filename":"global-foods.jpg",
+	  "filename":"Mexican.jpg",
       "location":{
          "address":"20 1st ave",
          "city":"Minneapolis",
