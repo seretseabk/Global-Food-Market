@@ -1,0 +1,81 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  
+  @mixin clearfix() {
+    &:after, &:before {
+      display: table;
+      content: " ";
+      line-height: 0;
+      font-size: 0;
+      clear: both; 
+    }
+  }
+  
+
+  .container {
+    @include clearfix;
+    width: 65%;
+    margin-top:0px;
+    margin: 1em auto;
+    border: 1px solid #ddd;
+    padding: .1em .1em;
+    column-count:4;
+    height: 700px;
+    span {
+      font-size: .9em;
+      color: #030303;
+      margin-bottom: 1em;
+      font-style: italic;
+    }
+  }
+
+  .side-navigation {
+    width: 15%;
+    margin: 1em auto;
+    border: 1px solid #030303;
+    float: left;
+    height: 700px;
+    text-align: center;
+  }
+
+  .right-pane{
+    float: right;
+    width: 15%;
+    margin-top: 0px;
+    .cart {
+      margin: 1em auto;
+      border: 1px solid #030303;
+      height:500px;
+      text-align: center;
+    }
+    .external-link {
+      margin: 1em auto;
+      border: 1px solid #030303;
+      height:200px;
+      text-align: center;
+    }
+  }
+
+
+  h5 {
+    @include clearfix;
+    position: relative;
+    font-weight: 700;
+    text-align: center;
+    span {
+      float: left;
+      margin-top: 0px;
+      width: 10%;
+      text-align: center;
+      display: block;
+      &:first-child {
+        width: 40%;
+        text-align: left;
+      }
+    }
+
+  }
+  
+  

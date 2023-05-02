@@ -1,6 +1,63 @@
-<article>
-    <img src="assets/images/{{menu.photoname}}" [alt]="menu.alt">
-    <div class="caption">
-      <span *ngFor= "let menu of menu.menu" >{{menu.name}}</span>
+<app-header></app-header>
+
+
+<div class="side-navigation">
+  <h5>Menu's</h5>
+  <p>Italian Food Menu</p>
+  <br>
+  <p>Chinese Food Menu</p>
+  <br>
+  <p>Thai Food Menu</p>
+  <br>
+  <p>Mexican Food Menu</p>
+</div>
+
+<div class="right-pane">
+  <div class="cart">
+    <h5>Cart</h5>
+  </div>
+
+  <div class="external-link">
+    <h5>External Link's</h5>
+  </div>
+</div>
+
+<div class="container">
+ <!-- <div class="image1">
+    <img src="assets/images/chineseFood.jpeg">
+  </div>-->
+  <div class="all-items">
+    <div class="main-item">
+      <h5>
+      <span>Main Item</span>
+      </h5>
+      <span>Main Combo</span>
+      <span>$10.00</span>
     </div>
-</article>
+
+    <div class="side-item">
+      <h5>
+      <span>Side Item</span>
+      </h5>
+      <span>Side Combo</span>
+      <span>$10.00</span>
+    </div>
+
+    <div class="extra-item">
+      <h5>
+        <span>Extras</span>
+      </h5>
+      <span>Extra Combo</span>
+      <span>$10.00</span>
+    </div>
+
+    <div class="drink-item">
+      <h5>
+        <span>Drinks</span>
+      </h5>
+      <span>Drink Combo</span>
+      <span>$10.00</span>
+    </div>
+  </div>  
+
+</div>
