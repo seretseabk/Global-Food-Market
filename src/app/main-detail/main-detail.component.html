@@ -1,0 +1,6 @@
+<article>
+    <img src="assets/images/{{menu.photoname}}" [alt]="menu.alt">
+    <div class="caption">
+      <span *ngFor= "let menu of menu.menu" >{{menu.name}}</span>
+    </div>
+</article>

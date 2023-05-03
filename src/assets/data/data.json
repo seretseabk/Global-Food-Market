@@ -4,6 +4,7 @@
       "name":"Chinese",
       "description":"Chinese Food Menu.",
 	  "filename":"global-foods.jpg",
+     "photoname":"chineseFood.jpeg",
       "location":{
          "address":"20 1st ave",
          "city":"Minneapolis",
@@ -39,6 +40,7 @@
       "name":"Italian",
       "description":"Italian Food Menu.",
 	  "filename":"Italian.png",
+     "photoname":"italyFood.jpeg",
       "location":{
          "address":"32 Lake St.",
          "city":"Minneapolis",
@@ -74,6 +76,7 @@
       "name":"Mexican",
       "description":"Mexican Food Menu.",
 	  "filename":"Mexican.jpg",
+     "photoname":"mexicanFood.jpeg",
       "location":{
          "address":"12 Nicollet ave",
          "city":"Minneapolis",
@@ -109,6 +112,7 @@
       "name":"Thai",
       "description":"Thai Food Menu.",
 	  "filename":"global-foods.jpg",
+     "photoname":"thaiFood.jpeg",
       "location":{
          "address":"211 University Ave",
          "city":"St Paul",
