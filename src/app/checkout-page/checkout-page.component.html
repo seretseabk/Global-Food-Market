@@ -1,0 +1,37 @@
+<div class="row" *ngIf="!submitted" >
+    <form #checkoutForm="ngForm" (ngSubmit)="onSubmit(checkoutForm)" novalidate>
+        <div class="control">
+            <span class="btn btn-info btn-lg btn-block disabled">Total Balance : {{order.total | currency}} </span>
+        </div>
+        <div [formGroup]="form" class="control">
+            <label>Credit Card Number</label>
+            <input id="cc-number" formControlName="creditCard" type="tel" autocomplete="cc-number" ccNumber required>
+            <span class="btn-outline-danger active" *ngIf="form.controls['creditCard'].errors && (form.get('creditCard')?.dirty || form.get('creditCard')?.touched)">Invlaid Credit Card.</span> 
+         </div>
+        <div [formGroup]="form" class="control">
+            <label>Expiration Date</label>
+            <input id="cc-exp-date" formControlName="expirationDate" type="tel" autocomplete="cc-exp" ccExp required>
+            <span class="btn-outline-danger active" *ngIf="form.controls['expirationDate'].errors && (form.get('expirationDate')?.dirty || form.get('expirationDate')?.touched)">Invlaid Expiration Date.</span>
+        </div>
+        <div [formGroup]="form" class="control">
+            <label>CVC</label>
+            <input id="cc-cvc" formControlName="cvc" type="tel" autocomplete="off" ccCvc required>
+            <span class="btn-outline-danger active" *ngIf="form.controls['cvc'].errors && (form.get('cvc')?.dirty || form.get('cvc')?.touched)">Invlaid CVC.</span>
+        </div>
+        <div [formGroup]="form" class="control">
+            <label>Phone Number</label>
+            <input id="phoneNumber" formControlName="phone" mask="(000) 000-0000">
+            <span class="btn-outline-danger active" *ngIf="form.controls['phone'].errors && (form.get('phone')?.dirty || form.get('phone')?.touched)">Invlaid Phone Number.</span>
+        </div>
+        <input class="btn btn-success btn-lg btn-block" type="submit" [disabled]="!form.valid">
+    </form>
+</div>
+<div class="row" *ngIf="submitted">
+    <div class="col">
+        <h3>Order placed at: {{order.menuName}} Resturant</h3>
+        <h4>Location: {{order.location.address}},</h4>
+        <h4>{{order.location.city}}, {{order.location.state}},</h4>
+        <h4>{{order.location.zip}}</h4>
+        <p class="btn btn-outline-success">Your Order should be ready in 20-30 minutes!</p>
+    </div>
+</div>

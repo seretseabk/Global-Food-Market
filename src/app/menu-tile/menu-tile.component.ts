@@ -8,7 +8,6 @@ import { IMenu } from '../models/imenu';
 })
 export class MenuTileComponent {
 
-
   @Input() public menu : IMenu = {
     id: 0,
     name: '',
@@ -26,6 +25,7 @@ export class MenuTileComponent {
     menu: []
 
   };
+
 
   
 }

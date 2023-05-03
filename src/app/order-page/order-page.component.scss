@@ -1,0 +1,35 @@
+#center-pane{
+    //background-image: url("../../assets/images/global-foods.jpg") ;
+    background-color: lightgray;
+    //color: white;
+    height: 20%;
+}
+#menu-pane{
+    text-align: center;
+}
+#menu-image{
+   width: 65%;
+}
+h4{
+    color: #fff;
+    background-color: #5a6268;
+    border-color: #545b62;
+    border-radius: 3px;
+    padding: 5px;
+    text-align: center;
+}
+
+#item-count{
+    float: right;
+    width:20%;
+}
+#delete-item{
+    float: right;
+}
+.btn.btn-info.disabled{
+    width: 100%;
+}
+.row-noborder{
+    overflow: scroll;
+    height: 200px;
+}
