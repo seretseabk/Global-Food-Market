@@ -38,9 +38,9 @@
       "id":"2",
       "name":"Italian",
       "description":"Italian Food Menu.",
-	  "filename":"global-foods.jpg",
+	  "filename":"Italian.png",
       "location":{
-         "address":"20 1st ave",
+         "address":"32 Lake St.",
          "city":"Minneapolis",
          "state":"MN",
 		   "zip":"55401",
@@ -58,14 +58,14 @@
 			"price": 6.99
          },
          {
-            "name":"Soy Sauce",
+            "name":"Parmesan Cheese",
             "type": "Extra",
 			"price": 0.0
          },
          {
-            "name":"Pepsi",
+            "name":"Wine",
             "type": "Drink",
-			"price": 1.99
+			"price": 10.99
          }
       ]
    },
@@ -73,9 +73,9 @@
       "id":"3",
       "name":"Mexican",
       "description":"Mexican Food Menu.",
-	  "filename":"global-foods.jpg",
+	  "filename":"Mexican.jpg",
       "location":{
-         "address":"20 1st ave",
+         "address":"12 Nicollet ave",
          "city":"Minneapolis",
          "state":"MN",
 		   "zip":"55401",
@@ -83,24 +83,24 @@
       },
       "menu":[
          {
-            "name":"Chicken Fried Rice",
+            "name":"Chicken Tacos",
             "type": "Main",
 			"price": 12.99
          },
          {
-            "name":"Salad",
+            "name":"Chips",
             "type": "Side",
 			"price": 6.99
          },
          {
-            "name":"Soy Sauce",
+            "name":"Guacamole",
             "type": "Extra",
 			"price": 0.0
          },
          {
-            "name":"Pepsi",
+            "name":"Lemonade",
             "type": "Drink",
-			"price": 1.99
+			"price": 2.99
          }
       ]
    },
@@ -110,17 +110,17 @@
       "description":"Thai Food Menu.",
 	  "filename":"global-foods.jpg",
       "location":{
-         "address":"20 1st ave",
-         "city":"Minneapolis",
+         "address":"211 University Ave",
+         "city":"St Paul",
          "state":"MN",
-		   "zip":"55401",
+		   "zip":"55201",
 		 "country":"USA"
       },
       "menu":[
          {
-            "name":"Chicken Fried Rice",
+            "name":"Chicken Pad Thai",
             "type": "Main",
-			"price": 12.99
+			"price": 17.99
          },
          {
             "name":"Salad",
@@ -133,7 +133,7 @@
 			"price": 0.0
          },
          {
-            "name":"Pepsi",
+            "name":"Coke",
             "type": "Drink",
 			"price": 1.99
          }
